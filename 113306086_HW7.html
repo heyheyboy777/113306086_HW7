@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="888.css">
+	<title>RESUME</title>
+</head>
+<body>
+	<div class = "main-container">
+		<div class ="container">
+			<div class="left-part">
+				<div class="top-part">
+					<img src ="3.jpg" width = "350"></div>
+				<div class="bottom-part">
+					<div class="text">
+						<h1 id="title">Patrick</h1><button class="name" id="name"><div id="button1">edit</div></button><input id = "inputArea" style="display: none;"></input>
+						<section><h3>About me</h3><p>Zamina-mina, hé-hé Waka, waka, hé-hé
+ 									Zamina-mina, zangalewa?
+ 									Anawa, ha-ha
+ 									Zamina-mina, hé-hé
+ 									Waka, waka, hé-hé
+ 									Zamina-mina, zangalewa?
+ 									This time for Africa</p>
+ 									<p>
+ 									Zamina-mina, hé-hé
+ 									Waka, waka, hé-hé
+ 									Zamina-mina, zangalewa?
+ 									Anawa, ha-ha
+ 									Zamina-mina, hé-hé
+ 									Waka, waka, hé-hé
+ 									Zamina-mina, zangalewa?
+ 									This time for Africa</p></section>
+ 									<section>
+ 									<h3>Contact</h3>
+ 									113306086@g.nccu.edu.tw
+
+									<img src ="nccu.png" width="200">
+					</div>
+				</div>
+			</div>
+			<div class="right-part">
+				<section class="rightup">
+					<h2>Education
+					</h2>
+					<pre class="edu">
+	2024	National Chengchi University
+
+	2021-	Banqiao Senior High School
+	2023
+
+	2018-	Middle School
+	2021
+				</section>
+				<section class="rightmid">
+					<h2>Homework List</h2>
+					<ul><li>HW1: <a href = "https://github.com/heyheyboy777/hw2">https://github.com/heyheyboy777/hw2</a></li><br>
+			<li>HW2: <a href = "https://github.com/heyheyboy777/113306086_hw2-excel">https://github.com/heyheyboy777/113306086_hw2-excel</a></li><br>
+			<li>HW3: <a href = "https://github.com/heyheyboy777/113306086_vba1-vba2">https://github.com/heyheyboy777/113306086_vba1-vba2</a></li>
+		</ul>
+				</section>
+				<section class="rightdown">
+					<h2>Favorite Music</h2>
+					<table>
+						<tr>
+							<th><a href ="https://youtu.be/emGri7i8Y2Y?si=rare_n6JNsru57QV" ><img src="intoodeep.jpg" width="60"></a><pre>		</pre></th>
+							<th><a href ="https://youtu.be/wIgmyE5Juzw?si=jExzLKMNtArLVx2Z" ><img src="areyouboredyet.jpg" width="60"></a><pre>		</pre></th>
+							<th><a href ="https://youtu.be/sVTy_wmn5SU?si=Ls5G0EfEjaNjWmvK" ><img src="omg.jpg" width="60"></a><pre>		</pre></th>
+						</tr>
+						<tr><th><strong>In Too Deep</strong></th>
+							<td><strong>Are You Bored Yet</strong></td>
+							<th><strong>OMG</strong></th>
+							
+						</tr>
+					</table>
+					<button id="add">add</button>
+					<input id = "songURL" style="display: none;">
+					<input id = "songName" style="display: none;">
+					<div id="addSong" class="addsong"></div>
+					<section class="small">
+						<br>
+						<br>
+						the reason I choose these song is because I'm a big fan of "Sum 41" "Wallows" and "Newjeans",these song brought me out from desperation several times.
+				</section>
+
+			</div>
+		</div>
+	</div>
+
+
+<script>
+	var editButton = document.getElementById("name");
+	editButton.addEventListener("click",function(){
+		var button1 =document.getElementById("button1");
+		const inputArea =document.getElementById("inputArea");
+		if(button1.innerHTML==="edit"){
+		button1.innerHTML="submit";
+	inputArea.style.display="block";}
+		else{
+		button1.innerHTML="edit";
+		const content = document.getElementById("inputArea").value;
+		if(content===""){
+			alert('名字呢！！！');
+		}
+		else{
+		const title=document.getElementById("title");
+		title.innerHTML=content;
+		inputArea.style.display="none";}
+		}
+		});
+	const addButton = document.getElementById("add");
+	addButton.addEventListener("click",function(){
+		const inputArea1 =document.getElementById("songURL");
+		const inputArea2 =document.getElementById("songName");
+
+		if(inputArea1.style.display==="none"){
+			inputArea1.style.display="block";
+			inputArea2.style.display="block";
+		}
+		else{
+			if(inputArea1.value===""||inputArea2===""){
+			alert('請重新輸入');
+		}
+		else{
+			inputArea1.style.display="none";
+			inputArea2.style.display="none";
+			const addSong =document.getElementById("addSong");
+			addSong.innerHTML=addSong.innerHTML+"<a href ="+inputArea1.value+" ><img src='spotifyicon.png' width='70'></a href>"+inputArea2.value;}
+		}
+	});
+	
+		
+</script>
+
+
+
+
+
+
+</body>
+</html>
