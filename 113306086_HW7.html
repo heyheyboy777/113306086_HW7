@@ -74,8 +74,8 @@
 						</tr>
 					</table>
 					<button id="add">add</button>
-					<input id = "songURL" style="display: none;">
-					<input id = "songName" style="display: none;">
+					<input id = "songURL" style="display: none;" placeholder="url">
+					<input id = "songName" style="display: none;" placeholder="name">
 					<div id="addSong" class="addsong"></div>
 					<section class="small">
 						<br>
@@ -118,7 +118,7 @@
 			inputArea2.style.display="block";
 		}
 		else{
-			if(inputArea1.value===""||inputArea2===""){
+			if(inputArea1.value===""||inputArea2.value===""){
 			alert('請重新輸入');
 		}
 		else{
